@@ -1,22 +1,13 @@
 import HabilidadCard from "./HabilidadCard";
 
 const Content = () => {
-  // Projects Links on click
-  const projectClick = (tipo) => {
-    switch (tipo) {
-      case "sistema":
-        window.open("https://sistema-control-desechos.web.app/", "_blank");
-        break;
-      case "todo":
-        window.open("https://statuesque-caramel-c7fd30.netlify.app/", "_blank");
-        break;
-      case "portafolio":
-        window.scrollTo({
-          top: document.getElementById("#"),
-          behavior: "smooth",
-        });
-        break;
-    }
+  const projectClick = (e) => {
+    e.preventDefault();
+
+    window.scrollTo({
+      top: document.getElementById("#"),
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -45,12 +36,10 @@ const Content = () => {
 
           <h2 className="presentacion__heading">Sobre mí</h2>
           <p className="presentacion__texto">
-            Me caracterizo por ser un profesional responsable, proactivo, y
+            Me caracterizo por ser un profesional responsable, proactivo y
             colaborativo, que prioriza el trabajo en equipo y las buenas
-            relaciones. Busco oportunidades para desarrollar y aplicar mis
-            conocimientos y habilidades como desarrollador frontend, mi objetivo
-            es seguir creciendo profesionalmente y aportar valor a mi sitio de
-            trabajo y a la sociedad.
+            relaciones, mi objetivo es seguir avanzando profesionalmente y
+            aportar valor a mi sitio de trabajo.
           </p>
         </section>
 
@@ -148,14 +137,18 @@ const Content = () => {
             <ul className="experiencia__elementos">
               <li className="experiencia__elemento">
                 <h3 className="experiencia__empresa">
-                  Almacenadora Lara-Mar.
-                  <span className="experiencia__cargo">Soporte Técnico</span>
+                  Plexus Tech.
+                  <span className="experiencia__cargo">
+                    Técnico de Soporte N2
+                  </span>
                 </h3>
               </li>
               <li className="experiencia__elemento">
                 <h3 className="experiencia__empresa">
                   PC Actual.
-                  <span className="experiencia__cargo">Soporte Técnico</span>
+                  <span className="experiencia__cargo">
+                    Técnico de Microinformática
+                  </span>
                 </h3>
               </li>
             </ul>
@@ -164,44 +157,48 @@ const Content = () => {
             <div className="experiencia__blanco"></div>
 
             <div className="experiencia__logos">
-              <picture>
-                <source
-                  srcSet="assets/img/mixtas/almacenadora_lara-mar.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcSet="assets/img/mixtas/almacenadora_lara-mar.webp"
-                  type="image/webp"
-                />
-                <img
-                  className="experiencia__logo-laramar"
-                  src="assets/img/mixtas/almacenadora_lara-mar.png"
-                  alt="logo laramar"
-                  width="169"
-                  height="102"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </picture>
-              <picture>
-                <source
-                  srcSet="assets/img/mixtas/pcactual.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcSet="assets/img/mixtas/pcactual.webp"
-                  type="image/webp"
-                />
-                <img
-                  className="experiencia__logo-pcactual"
-                  src="assets/img/mixtas/pcactual.png"
-                  alt="logo pcactual"
-                  width="131"
-                  height="131"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </picture>
+              <a href="https://www.plexus.es/" target="_blank">
+                <picture>
+                  <source
+                    srcSet="assets/img/mixtas/plexus.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcSet="assets/img/mixtas/plexus.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    className="experiencia__plexus"
+                    src="assets/img/mixtas/plexus.png"
+                    alt="logo plexus"
+                    width="169"
+                    height="102"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </a>
+              <a href="https://pcactual.net/" target="_blank">
+                <picture>
+                  <source
+                    srcSet="assets/img/mixtas/pcactual.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcSet="assets/img/mixtas/pcactual.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    className="experiencia__logo-pcactual"
+                    src="assets/img/mixtas/pcactual.png"
+                    alt="logo pcactual"
+                    width="131"
+                    height="131"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </a>
             </div>
 
             <div className="experiencia__background"></div>
@@ -214,11 +211,24 @@ const Content = () => {
             <div className="habilidades__grid">
               <HabilidadCard
                 tipo="lenguajes"
-                contenido={["html", "css", "javascript", "typescript"]}
+                contenido={[
+                  "html",
+                  "css",
+                  "javascript",
+                  "python",
+                  "typescript",
+                ]}
               />
               <HabilidadCard
                 tipo="frameworksLibrerias"
-                contenido={["sass", "tailwind", "bootstrap", "vue", "react"]}
+                contenido={[
+                  "sass",
+                  "tailwind",
+                  "bootstrap",
+                  "vue",
+                  "react",
+                  "customtkinter",
+                ]}
               />
               <HabilidadCard
                 tipo="herramientas"
@@ -237,7 +247,6 @@ const Content = () => {
               <HabilidadCard
                 tipo="usoSecundario"
                 contenido={[
-                  "python",
                   "java",
                   "php",
                   "jquery",
@@ -257,9 +266,10 @@ const Content = () => {
             <h2 className="proyectos__heading">Proyectos</h2>
             <div className="proyectos__grid">
               <div className="proyecto">
-                <div
+                <a
                   className="proyecto__sistema"
-                  onClick={() => projectClick("sistema")}
+                  href="https://sistema-control-desechos.web.app/"
+                  target="_blank"
                 >
                   <div className="proyecto__imagen-sistema"></div>
 
@@ -289,13 +299,14 @@ const Content = () => {
                       </a>
                     </nav>
                   </div>
-                </div>
+                </a>
               </div>
 
               <div className="proyecto">
-                <div
+                <a
                   className="proyecto__todo"
-                  onClick={() => projectClick("todo")}
+                  href="https://statuesque-caramel-c7fd30.netlify.app/"
+                  target="_blank"
                 >
                   <div className="proyecto__imagen-todo"></div>
 
@@ -321,13 +332,14 @@ const Content = () => {
                       </nav>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
 
               <div className="proyecto">
-                <div
+                <a
                   className="proyecto__portafolio"
-                  onClick={() => projectClick("portafolio")}
+                  href="#"
+                  onClick={(e) => projectClick(e)}
                 >
                   <div className="proyecto__imagen-portafolio"></div>
 
@@ -355,7 +367,41 @@ const Content = () => {
                       </a>
                     </nav>
                   </div>
-                </div>
+                </a>
+              </div>
+
+              <div className="proyecto">
+                <a
+                  className="proyecto__systemcheck"
+                  href="https://github.com/anderson-parmigiani/system-check"
+                  target="_blank"
+                >
+                  <div className="proyecto__imagen-systemcheck"></div>
+
+                  <div className="proyecto__contenido">
+                    <h3 className="proyecto__titulo-systemcheck">
+                      System Check
+                    </h3>
+                    <p className="proyecto__descripcion proyecto__descripcion--systemcheck">
+                      Script para Windows y Linux que muestra información
+                      relevante del sistema en una interaz gráfica.
+                    </p>
+                    <div className="proyecto__lenguajes">
+                      <span className="proyecto__lenguaje">python</span>
+                      <span className="proyecto__lenguaje">customtkinter</span>
+                    </div>
+                    <nav className="proyecto__nav">
+                      <a
+                        className="proyecto__enlace"
+                        href="https://github.com/anderson-parmigiani/system-check"
+                        onClick={(e) => e.stopPropagation()}
+                        target="_blank"
+                      >
+                        <span className="proyecto__accesible">Github</span>
+                      </a>
+                    </nav>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
