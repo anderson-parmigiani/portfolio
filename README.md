@@ -1,5 +1,5 @@
-## Portafolio
+## Portfolio
 
-Portafolio de mi autoría donde muestro información profesional relevante sobre mí.
+Portfolio de mi autoría donde muestro información profesional relevante sobre mí.
 
-[Link del portafolio](https://parandev.com 'enlace portafolio')
+[Link del portfolio](https://anderson-parmigiani.github.io/portfolio/ "enlace portfolio")

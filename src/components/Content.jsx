@@ -344,9 +344,9 @@ const Content = () => {
                   <div className="proyecto__imagen-portafolio"></div>
 
                   <div className="proyecto__contenido">
-                    <h3 className="proyecto__titulo-portafolio">Portafolio</h3>
+                    <h3 className="proyecto__titulo-portafolio">Portfolio</h3>
                     <p className="proyecto__descripcion proyecto__descripcion--portafolio">
-                      Portafolio de mi autoría donde muestro información
+                      Portfolio de mi autoría donde muestro información
                       profesional relevante sobre mí. Actualmente se está
                       visualizando.
                     </p>
@@ -359,7 +359,7 @@ const Content = () => {
                     <nav className="proyecto__nav">
                       <a
                         className="proyecto__enlace"
-                        href="https://github.com/anderson-parmigiani/portafolio"
+                        href="https://github.com/anderson-parmigiani/portfolio"
                         onClick={(e) => e.stopPropagation()}
                         target="_blank"
                       >
