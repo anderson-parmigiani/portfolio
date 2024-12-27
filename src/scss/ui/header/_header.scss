@@ -3,15 +3,56 @@
 
 .header {
     background-color: v.$primario;
-    padding-block: 6rem;
+    padding: 2rem 0rem 6rem 0rem;
+
+    &__language {
+        display: flex;
+        justify-content: center;
+
+        @include m.desktop {
+            justify-content: right;
+        }
+    }
+
+    &__language-button {
+        @include m.boton(v.$primario, v.$blanco);
+        cursor: pointer;
+        margin-top: 0;
+        padding-inline: 1rem;
+        transition-property: color;
+        
+        &:not(:disabled):hover {
+            background-color: v.$primario;
+            color: v.$beige;
+        }
+
+        &:disabled {
+            background-color: v.$primario;
+            cursor: auto;
+            opacity: 0.6;
+        }
+    }
 
     &__barra {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        @include m.desktop {
+            gap: 0;
+        }
+    }
+
+    &__content {
         display: flex;
         flex-direction: column;
         gap: 5rem;
         @include m.desktop {
             flex-direction: row;
             justify-content: space-between;
+            gap: 3rem;
+        }
+        @include m.desktop-xxl {
+            gap: 5rem;
         }
     }
 

@@ -22,7 +22,7 @@
     }
 
     &__texto {
-        margin: 0;
+        margin: 0 0 2rem 0;
         color: v.$terciario;
         line-height: 1.8;
         font-size: 2rem;
@@ -227,19 +227,25 @@
         @include m.grid(1, 3rem);
 
         @include m.tablet {
-            @include m.grid(2, 2rem);
+            @include m.grid(3, 2rem);
+        }
+
+        @include m.desktop {
+            @include m.grid(3, 6rem);
         }
 
         @include m.desktop-xxl {
-            @include m.grid(4, 2rem);
+            @include m.grid(3, 10rem);
         }
     }
     &__card {
         background-color: v.$blanco;
         padding: 1rem 2rem;
         border-radius: .6rem;
+        margin-inline: 4rem;
         @include m.tablet {
             padding-inline: 1rem;
+            margin-inline: 0rem;
         }
         @include m.desktop {
             padding-inline: 2rem;
@@ -312,7 +318,9 @@
     &__sistema,
     &__todo,
     &__portafolio,
-    &__systemcheck {
+    &__systemcheck,
+    &__apirest,
+    &__chat {
         display: grid;
         grid-template-rows: repeat(2, 1fr);
         height: 650px;
@@ -372,6 +380,27 @@
         );
     }
 
+    &__imagen-apirest {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: image-set(
+            url(/assets/img/mixtas/proyecto_apirest.avif),
+            url(/assets/img/mixtas/proyecto_apirest.webp),
+            url(/assets/img/mixtas/proyecto_apirest.png)
+        );
+    }
+
+    &__imagen-chat {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top, center;
+        background-image: image-set(
+            url(/assets/img/mixtas/proyecto_chat.webp),
+            url(/assets/img/mixtas/proyecto_chat.png)
+        );
+    }
+
     &__contenido {
         display: flex;
         flex-direction: column;
@@ -389,7 +418,9 @@
     &__titulo-sistema,
     &__titulo-todo,
     &__titulo-portafolio,
-    &__titulo-systemcheck {
+    &__titulo-systemcheck,
+    &__titulo-apirest,
+    &__titulo-chat {
         margin-top: 3rem;
     }
 
