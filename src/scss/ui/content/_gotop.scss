@@ -1,0 +1,44 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.goTopHidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.goTop {
+  display: block;
+  position: fixed;
+  z-index: 10;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2.5rem;
+  bottom: 5%;
+  left: 87.5%;
+  cursor: pointer;
+  background-image: url(/assets/img/iconos/gotop.svg);
+  background-color: v.$beige;
+  border: 0.2rem solid v.$beige;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 3rem;
+
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+
+  @include m.tablet {
+    left: 90%;
+  }
+
+  @include m.desktop {
+    left: 95%;
+  }
+
+  &:active {
+    background-color: darken(v.$beige, 20%);
+    border: 0.2rem solid darken(v.$beige, 20%)
+  }
+}

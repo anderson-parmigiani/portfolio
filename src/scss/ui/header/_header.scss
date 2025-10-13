@@ -1,0 +1,187 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.header {
+    background-color: v.$primario;
+    padding: 2rem 0rem 6rem 0rem;
+
+    &__language {
+        display: flex;
+        justify-content: center;
+
+        @include m.desktop {
+            justify-content: right;
+        }
+    }
+
+    &__language-button {
+        @include m.boton(v.$primario, v.$blanco);
+        cursor: pointer;
+        margin-top: 0;
+        padding-inline: 1rem;
+        transition-property: color;
+        
+        &:not(:disabled):hover {
+            background-color: v.$primario;
+            color: v.$beige;
+        }
+
+        &:disabled {
+            background-color: v.$primario;
+            cursor: auto;
+            opacity: 0.6;
+        }
+    }
+
+    &__barra {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        @include m.desktop {
+            gap: 0;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        @include m.desktop {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 3rem;
+        }
+        @include m.desktop-xxl {
+            gap: 5rem;
+        }
+    }
+
+    &__heading {
+        text-align: center;
+        color: v.$blanco;
+        font-size: 2.8rem;
+        padding: 0;
+        @media (min-width: 400px) {
+            font-size: 3rem;
+        }
+        @include m.telefono {
+            font-size: 3.6rem;
+        }
+    }
+    &__span {
+        text-align: center;
+        display: block;
+        font-size: 2.7rem;
+        color: darken(v.$beige, 7%);
+        margin: 0 auto 2rem auto;
+        @media (min-width: 400px) {
+            font-size: 2.8rem;
+        }
+        @include m.telefono {
+            font-size: 3.2rem;
+        }
+    }
+
+    &__email {
+        display: flex;
+        order: 3;
+        justify-content: center;
+        @include m.desktop {
+            align-items: center;
+        }
+    }
+    
+    &__email-contenido {
+        position: relative;
+        border-radius: 1.6rem;
+    }
+    
+    &__email-texto {
+        border: none;
+        padding: 1.4rem 2rem;
+        background-color: v.$beige;
+        color: v.$terciario;
+        border-radius: 1.6rem;
+        font-weight: 700;
+        width: 100%;
+        min-width: 295px;
+        max-width: 300px;
+        @include m.telefono {
+            max-width: 325px;
+        }
+        &:focus-visible {
+            outline: 0;
+        }
+    }
+    &__email-copiar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: none;
+        border-top-right-radius: 1.6rem;
+        border-bottom-right-radius: 1.6rem;
+        width: 4rem;
+        height: 100%;
+        background-image: url(/assets/img/iconos/copy.svg), linear-gradient(to right, lighten(v.$beige, 10%) 0%, lighten(v.$beige, 10%) 100%);
+        background-repeat: no-repeat;
+        background-position: center center, center;
+        background-size: 2rem, auto;
+        cursor: pointer;
+    }
+    &__email-tooltip {
+        position: absolute;
+        bottom: -4rem;
+        right: 9.8rem;
+        padding: .5rem 1rem;
+        background-color: green;
+        color: v.$blanco;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 700;
+        border-radius: 1.6rem;
+    }
+}
+
+.nav {
+    display: flex;
+    order: 2;
+    justify-content: space-evenly;
+    @include m.tablet {
+        justify-content: center;
+        gap: 8rem;
+    }
+
+    &__enlace {
+        color: v.$blanco;
+        border-radius: 1.6rem;
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 700;
+        &::after {
+            content: '';
+            padding: 2rem;
+            display: inline-block;
+            background-size: 4rem;
+        }
+
+        &[href*="CV"]::after {
+            background-image: url(/assets/img/iconos/cv.svg);
+        }
+        &[href*="linkedin"]::after {
+            background-image: url(/assets/img/iconos/linkedin.svg);
+        }
+        &[href*="github"]::after {
+            background-image: url(/assets/img/iconos/github.svg);
+        }
+    }
+    &__accesible {
+        display: block;
+        height: 1px;
+        width: 1px;
+        border: 0;
+        padding: 0;
+        clip: rect(0,0,0,0);
+        overflow: hidden;
+    }
+}
