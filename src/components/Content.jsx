@@ -116,7 +116,7 @@ const Content = ({ language }) => {
         <section className="presentacion presentacion__contenedor">
           <img
             className="presentacion__imagen"
-            src="portfolio/assets/img/mixtas/imagen_personal_2.png"
+            src="assets/img/mixtas/imagen_personal_2.png"
             alt="imagen personal"
             width="120"
             height="120"
@@ -134,7 +134,7 @@ const Content = ({ language }) => {
             <a href="https://www.credly.com/badges/31198207-86d3-4fc8-a241-cdcca5e1e123/public_url" target="_blank">
               <img
                 className="formacion__images"
-                src="portfolio/assets/img/mixtas/CSIS_Certified.png"
+                src="assets/img/mixtas/CSIS_Certified.png"
                 alt="imagen certificado comptia IT Operations Specialist"
                 width="138"
                 height="138"
@@ -145,7 +145,7 @@ const Content = ({ language }) => {
             <a href="https://www.credly.com/badges/ec5b5266-347c-4b13-a75d-5ee5822a6e3a/public_url" target="_blank">
               <img
                 className="formacion__images"
-                src="portfolio/assets/img/mixtas/CIOS_Certified.png"
+                src="assets/img/mixtas/CIOS_Certified.png"
                 alt="imagen certificado comptia IT Operations Specialist"
                 width="138"
                 height="138"
@@ -156,7 +156,7 @@ const Content = ({ language }) => {
             <a href="https://cert.efset.org/ndLLrv" target="_blank">
               <img
                 className="formacion__images"
-                src="portfolio/assets/img/mixtas/efset_cert.png"
+                src="assets/img/mixtas/efset_cert.png"
                 alt="imagen certificado efset"
                 width="138"
                 height="138"
@@ -179,7 +179,7 @@ const Content = ({ language }) => {
               <div className="formacion__reconocimientos">
                 <img
                   className="formacion__estrella"
-                  src="portfolio/assets/img/iconos/recognition.svg"
+                  src="assets/img/iconos/recognition.svg"
                   alt="imagen reconocimiento universidad"
                   width="20"
                   height="20"
@@ -188,7 +188,7 @@ const Content = ({ language }) => {
                 />
                 <img
                   className="formacion__estrella"
-                  src="portfolio/assets/img/iconos/recognition.svg"
+                  src="assets/img/iconos/recognition.svg"
                   alt="imagen reconocimiento universidad"
                   width="20"
                   height="20"
@@ -287,7 +287,7 @@ const Content = ({ language }) => {
               <a href="https://www.plexus.es/" target="_blank">
                 <picture>
                   <source
-                    srcSet="portfolio/assets/img/mixtas/plexus.avif"
+                    srcSet="assets/img/mixtas/plexus.avif"
                     type="image/avif"
                   />
                   <source
@@ -296,7 +296,7 @@ const Content = ({ language }) => {
                   />
                   <img
                     className="experiencia__plexus"
-                    src="portfolio/assets/img/mixtas/plexus.png"
+                    src="assets/img/mixtas/plexus.png"
                     alt="logo plexus"
                     width="169"
                     height="102"
@@ -308,16 +308,16 @@ const Content = ({ language }) => {
               <a href="https://pcactual.net/" target="_blank">
                 <picture>
                   <source
-                    srcSet="portfolio/assets/img/mixtas/pcactual.avif"
+                    srcSet="assets/img/mixtas/pcactual.avif"
                     type="image/avif"
                   />
                   <source
-                    srcSet="portfolio/assets/img/mixtas/pcactual.webp"
+                    srcSet="assets/img/mixtas/pcactual.webp"
                     type="image/webp"
                   />
                   <img
                     className="experiencia__logo-pcactual"
-                    src="portfolio/assets/img/mixtas/pcactual.png"
+                    src="assets/img/mixtas/pcactual.png"
                     alt="logo pcactual"
                     width="131"
                     height="131"
