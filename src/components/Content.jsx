@@ -6,10 +6,10 @@ const Content = ({ language }) => {
   const textMap = {
     en: {
       presentationHeading: "About me",
-      presentationTextOne: "Computer Engineer, IT operations specialist with knowledge in full stack development.",
-      presentationTextTwo: "I'm a professional with solid experience as an IT support specialist, known for being responsible, detail oriented, perfectionist, proactive, collaborative, and deeply committed to teamwork.",
+      presentationTextOne: "Computer Engineer and CompTIA certified IT professional (Security+, Network+, A+) with a versatile background in System Administration and Full Stack Development.",
+      presentationTextTwo: "I specialize in bridging the gap between hardware infrastructure and software applications. My experience in technical support has honed my troubleshooting skills, while my engineering degree and development knowledge allow me to approach IT operations with a focus on automation, efficiency, and security.",
       formationHeading: "Education",
-      certHeading: "Certifications",
+      certHeading: "International Certifications",
       formationTooltip: "Two academic merits",
       formationCenterOne: "José Antonio Páez University.",
       formationTitleOne: "Computer Engineering",
@@ -24,8 +24,14 @@ const Content = ({ language }) => {
       formationTitleFour: "CompTIA Network+",
       educationDateFour: " (Oct 2025)",
       formationCenterFive: "CompTIA.",
-      formationTitleFive: "CompTIA IT Operations Specialist",
+      formationTitleFive: "CompTIA IT Operations Specialist – CIOS",
       educationDateFive: " (Oct 2025)",
+      formationCenterSix: "CompTIA.",
+      formationTitleSix: "CompTIA Security+",
+      educationDateSix: " (Nov 2025)",
+      formationCenterSeven: "CompTIA.",
+      formationTitleSeven: "CompTIA Secure Infrastructure Specialist – CSIS",
+      educationDateSeven: " (Nov 2025)",
       experienceHeading: "Experience",
       experienceCompanyOne: "Plexus Tech",
       experienceCompanyOneDate: " (Oct 2023 - Nov 2024)",
@@ -52,10 +58,10 @@ const Content = ({ language }) => {
     },
     es: {
       presentationHeading: "Sobre mí",
-      presentationTextOne: "Ingeniero de Computación, especialista en operaciones de TI con conocimientos en desarrollo full stack.",
-      presentationTextTwo: "Soy un profesional con sólida experiencia como especialista de soporte TI, me caracterizo por ser responsable, atento, perfeccionista, proactivo, colaborativo y estar comprometido con el trabajo en equipo.",
+      presentationTextOne: "Ingeniero de Computación y profesional de TI certificado por CompTIA (Security+, Network+, A+) con un perfil versátil que combina la Administración de Sistemas y el Desarrollo Full Stack.",
+      presentationTextTwo: "Me especializo en integrar la infraestructura de hardware con las aplicaciones de software. Mi experiencia en soporte técnico ha perfeccionado mi capacidad de diagnóstico y resolución de problemas, mientras que mi formación como ingeniero y mis conocimientos en desarrollo me permiten abordar las operaciones de TI con un enfoque en la automatización, la eficiencia y la seguridad.",
       formationHeading: "Educación",
-      certHeading: "Certificaciones",
+      certHeading: "Certificaciones Internacionales",
       formationTooltip: "Dos méritos académicos",
       formationCenterOne: "Universidad José Antonio Páez.",
       formationTitleOne: "Ingeniería de Computación",
@@ -70,8 +76,14 @@ const Content = ({ language }) => {
       formationTitleFour: "CompTIA Network+",
       educationDateFour: " (Oct 2025)",
       formationCenterFive: "CompTIA.",
-      formationTitleFive: "CompTIA IT Operations Specialist",
+      formationTitleFive: "CompTIA IT Operations Specialist – CIOS",
       educationDateFive: " (Oct 2025)",
+      formationCenterSix: "CompTIA.",
+      formationTitleSix: "CompTIA Security+",
+      educationDateSix: " (Nov 2025)",
+      formationCenterSeven: "CompTIA.",
+      formationTitleSeven: "CompTIA Secure Infrastructure Specialist – CSIS",
+      educationDateSeven: " (Nov 2025)",
       experienceHeading: "Experiencia",
       experienceCompanyOne: "Plexus Tech.",
       experienceCompanyOneDate: " (Oct 2023 - Nov 2024)",
@@ -104,7 +116,7 @@ const Content = ({ language }) => {
         <section className="presentacion presentacion__contenedor">
           <img
             className="presentacion__imagen"
-            src="assets/img/mixtas/imagen_personal_2.png"
+            src="portfolio/assets/img/mixtas/imagen_personal_2.png"
             alt="imagen personal"
             width="120"
             height="120"
@@ -119,10 +131,21 @@ const Content = ({ language }) => {
 
         <section className="formacion formacion__contenedor">
           <div className="formacion__img">
-            <a href="https://www.credly.com/badges/aba4b392-d60e-4cb0-9a35-c3c37d1e1736/linked_in_profile" target="_blank">
+            <a href="https://www.credly.com/badges/31198207-86d3-4fc8-a241-cdcca5e1e123/public_url" target="_blank">
               <img
                 className="formacion__images"
-                src="assets/img/mixtas/CIOS_Certified.png"
+                src="portfolio/assets/img/mixtas/CSIS_Certified.png"
+                alt="imagen certificado comptia IT Operations Specialist"
+                width="138"
+                height="138"
+                loading="lazy"
+                decoding="async"
+                />
+            </a>
+            <a href="https://www.credly.com/badges/ec5b5266-347c-4b13-a75d-5ee5822a6e3a/public_url" target="_blank">
+              <img
+                className="formacion__images"
+                src="portfolio/assets/img/mixtas/CIOS_Certified.png"
                 alt="imagen certificado comptia IT Operations Specialist"
                 width="138"
                 height="138"
@@ -133,7 +156,7 @@ const Content = ({ language }) => {
             <a href="https://cert.efset.org/ndLLrv" target="_blank">
               <img
                 className="formacion__images"
-                src="assets/img/mixtas/efset_cert.png"
+                src="portfolio/assets/img/mixtas/efset_cert.png"
                 alt="imagen certificado efset"
                 width="138"
                 height="138"
@@ -156,7 +179,7 @@ const Content = ({ language }) => {
               <div className="formacion__reconocimientos">
                 <img
                   className="formacion__estrella"
-                  src="assets/img/iconos/recognition.svg"
+                  src="portfolio/assets/img/iconos/recognition.svg"
                   alt="imagen reconocimiento universidad"
                   width="20"
                   height="20"
@@ -165,7 +188,7 @@ const Content = ({ language }) => {
                 />
                 <img
                   className="formacion__estrella"
-                  src="assets/img/iconos/recognition.svg"
+                  src="portfolio/assets/img/iconos/recognition.svg"
                   alt="imagen reconocimiento universidad"
                   width="20"
                   height="20"
@@ -179,8 +202,24 @@ const Content = ({ language }) => {
             <h2 className="formacion__heading--cert">{textMap[language].certHeading}</h2>
             <li className="formacion__elemento">
               <h3 className="formacion__centro">
+                {textMap[language].formationCenterSeven}<span className="experiencia__date">{textMap[language].educationDateSeven}</span>
+                <a href="https://www.credly.com/badges/31198207-86d3-4fc8-a241-cdcca5e1e123/public_url" target="_blank" className="formacion__titulo formacion__titulo--enlace">
+                  {textMap[language].formationTitleSeven}
+                </a>
+              </h3>
+            </li>
+            <li className="formacion__elemento">
+              <h3 className="formacion__centro">
+                {textMap[language].formationCenterSix}<span className="experiencia__date">{textMap[language].educationDateSix}</span>
+                <a href="https://cp.certmetrics.com/comptia/en/public/verify/credential/8747d88266b4415894c718967615fe5c" target="_blank" className="formacion__titulo formacion__titulo--enlace">
+                  {textMap[language].formationTitleSix}
+                </a>
+              </h3>
+            </li>
+            <li className="formacion__elemento">
+              <h3 className="formacion__centro">
                 {textMap[language].formationCenterFive}<span className="experiencia__date">{textMap[language].educationDateFive}</span>
-                <a href="https://www.credly.com/badges/aba4b392-d60e-4cb0-9a35-c3c37d1e1736/linked_in_profile" target="_blank" className="formacion__titulo formacion__titulo--enlace">
+                <a href="https://www.credly.com/badges/ec5b5266-347c-4b13-a75d-5ee5822a6e3a/public_url" target="_blank" className="formacion__titulo formacion__titulo--enlace">
                   {textMap[language].formationTitleFive}
                 </a>
               </h3>
@@ -188,7 +227,7 @@ const Content = ({ language }) => {
             <li className="formacion__elemento">
               <h3 className="formacion__centro">
                 {textMap[language].formationCenterFour}<span className="experiencia__date">{textMap[language].educationDateFour}</span>
-                <a href="https://www.certmetrics.com/comptia/public/verification.aspx?code=NKK3362QXE14CXSJ" target="_blank" className="formacion__titulo formacion__titulo--enlace">
+                <a href="https://cp.certmetrics.com/comptia/en/public/verify/credential/NKK3362QXE14CXSJ" target="_blank" className="formacion__titulo formacion__titulo--enlace">
                   {textMap[language].formationTitleFour}
                 </a>
               </h3>
@@ -196,7 +235,7 @@ const Content = ({ language }) => {
             <li className="formacion__elemento">
               <h3 className="formacion__centro">
                 {textMap[language].formationCenterTwo}<span className="experiencia__date">{textMap[language].educationDateTwo}</span>
-                <a href="https://www.certmetrics.com/comptia/public/verification.aspx?code=MM15WPN542EQ18R2" target="_blank" className="formacion__titulo formacion__titulo--enlace">
+                <a href="https://cp.certmetrics.com/comptia/en/public/verify/credential/MM15WPN542EQ18R2" target="_blank" className="formacion__titulo formacion__titulo--enlace">
                   {textMap[language].formationTitleTwo}
                 </a>
               </h3>
@@ -248,7 +287,7 @@ const Content = ({ language }) => {
               <a href="https://www.plexus.es/" target="_blank">
                 <picture>
                   <source
-                    srcSet="assets/img/mixtas/plexus.avif"
+                    srcSet="portfolio/assets/img/mixtas/plexus.avif"
                     type="image/avif"
                   />
                   <source
@@ -257,7 +296,7 @@ const Content = ({ language }) => {
                   />
                   <img
                     className="experiencia__plexus"
-                    src="assets/img/mixtas/plexus.png"
+                    src="portfolio/assets/img/mixtas/plexus.png"
                     alt="logo plexus"
                     width="169"
                     height="102"
@@ -269,16 +308,16 @@ const Content = ({ language }) => {
               <a href="https://pcactual.net/" target="_blank">
                 <picture>
                   <source
-                    srcSet="assets/img/mixtas/pcactual.avif"
+                    srcSet="portfolio/assets/img/mixtas/pcactual.avif"
                     type="image/avif"
                   />
                   <source
-                    srcSet="assets/img/mixtas/pcactual.webp"
+                    srcSet="portfolio/assets/img/mixtas/pcactual.webp"
                     type="image/webp"
                   />
                   <img
                     className="experiencia__logo-pcactual"
-                    src="assets/img/mixtas/pcactual.png"
+                    src="portfolio/assets/img/mixtas/pcactual.png"
                     alt="logo pcactual"
                     width="131"
                     height="131"
@@ -310,6 +349,10 @@ const Content = ({ language }) => {
                     "soporte a dispositivos móviles",
                     "gestión de incidencias",
                     "gestión de redes",
+                    "gestión de seguridad",
+                    "conciencia en seguridad",
+                    "control de acceso",
+                    "bases de datos",
                     "desarrollo full stack",
                     "css",
                     "html",
@@ -345,6 +388,10 @@ const Content = ({ language }) => {
                     "mobile device support",
                     "incidents management",
                     "network management",
+                    "security management",
+                    "security awareness",
+                    "access control",
+                    "databases",
                     "full stack development",
                     "css",
                     "html",

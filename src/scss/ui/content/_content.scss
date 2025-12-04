@@ -15,7 +15,7 @@
         margin-top: 2.9rem;
         margin-right: 3.2rem;
         @include m.desktop-xxl{
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
     }
 
@@ -50,7 +50,7 @@
         @include m.tablet {
             margin-top: 35rem;
             display: flex;
-            gap: 18rem;
+            gap: 9rem;
             flex-direction: column;
             float: right;
         }

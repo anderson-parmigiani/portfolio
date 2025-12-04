@@ -25,11 +25,11 @@ const Header = ({ language, setLanguageHandler }) => {
 
   const textMap = {
     en: {
-      title: "IT Operations Specialist",
+      title: "SysAdmin",
       emailTooltip: "Copied!"
     },
     es: {
-      title: "Especialista en Operaciones de TI",
+      title: "SysAdmin",
       emailTooltip: "¡Copiado!"
     }
   };
