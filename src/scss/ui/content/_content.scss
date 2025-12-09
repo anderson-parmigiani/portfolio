@@ -1,0 +1,531 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.presentacion {
+
+    @include m.desktop {
+        padding-left: 0;
+    }
+
+    &__imagen {
+        width: 40%;
+        height: auto;
+        max-width: 188px;
+        float: left;
+        margin-top: 2.9rem;
+        margin-right: 3.2rem;
+        @include m.desktop-xxl{
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__heading {
+        margin-top: 5rem;
+        color: v.$secundario;
+    }
+
+    &__texto {
+        margin: 0 0 2rem 0;
+        color: v.$terciario;
+        line-height: 1.8;
+        font-size: 2rem;
+    }
+}
+
+.formacion {
+    margin-top: 7rem;
+
+    &__heading {
+        color: v.$secundario;
+
+        &--cert {
+            margin-left: -2rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__img {
+        display: none;
+
+        @include m.tablet {
+            margin-top: 35rem;
+            display: flex;
+            gap: 9rem;
+            flex-direction: column;
+            float: right;
+        }
+        @include m.desktop {
+            margin-top: 27rem;
+        }
+    }
+
+    &__images {
+        float: right;
+        width: 75%;
+        height: 100%;
+        max-width: 277px;
+        transition-property: transform;
+        transition-duration: .3s;
+
+        &:hover {
+            transform: scale(1.05); 
+        }
+    }
+
+    &__elementos {
+        color: v.$terciario;
+        padding-left: 2rem;
+        margin-top: 3rem;
+    }
+    &__elemento {
+        margin-bottom: 4rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__centro {
+        font-weight: 700;
+    }
+    &__titulo {
+        font-weight: 400;
+        display: block;
+        margin-top: 2rem;
+        color: v.$secundario;
+
+        &--enlace {
+            text-decoration: underline;
+        }
+    }
+    &__reconocimientos {
+        margin-top: .3rem;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        &:hover {
+            .formacion__tooltip {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+    &__estrella {
+        width: 2rem;
+        height: auto;
+    }
+    &__tooltip {
+        visibility: visible;
+        margin-left: .5rem;
+        padding: .5rem 1rem;
+        border-radius: 1.6rem;
+        background-color: v.$beige;
+        color: v.$negro;
+        @include m.desktop {
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: .3s;
+            visibility: hidden;
+        }
+    }
+    &__estrella {
+        width: 2rem;
+    }
+}
+
+.experiencia {
+    @include m.tablet {
+        @include m.grid(2, 0rem);
+    }
+
+    &__contenedor {
+        @include m.tablet {
+            max-width: calc(120rem / 2);
+            margin-right: unset;
+            padding-bottom: 5rem;
+            background-color: v.$blanco;
+        }
+    }
+
+    margin-top: 7rem;
+
+    &__heading {
+        color: v.$secundario;
+        text-align: left;
+    }
+
+    &__elementos {
+        color: v.$terciario;
+        padding-left: 2rem;
+        margin-top: 3rem;
+    }
+
+    &__elemento {
+        margin-bottom: 4rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__empresa {
+        font-weight: 700;
+    }
+
+    &__date {
+        display: block;
+        font-weight: 400;
+        font-size: 1.9rem;
+        @include m.desktop {
+            display: unset;
+        }
+    }
+    &__cargo {
+        font-weight: 400;
+        display: block;
+        margin-top: 2rem;
+    }
+    &__imagenes {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__logos {
+        display: none;
+
+        @include m.tablet {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 2rem;
+        }
+        @include m.desktop {
+            justify-content: flex-start;
+            gap: 3rem;
+            margin-left: 5rem;
+        }
+        @include m.desktop-xxl {
+            gap: 6rem;
+        }
+    }
+    &__logo-plexus {
+        width: 200px;
+        height: auto;
+        @include m.desktop {
+            width: 225px;
+        }
+        @include m.desktop-xxl {
+            width: 250px;
+        }
+    }
+    &__logo-pcactual {
+        width: 150px;
+        height: auto;
+        @include m.desktop {
+            width: 175px;
+        }
+        @include m.desktop-xxl {
+            width: 200px;
+        }
+    }
+
+    &__background {
+
+        @include m.tablet {
+            border-top-left-radius: 5rem;
+            margin-bottom: -1px;
+            background-color: v.$primario;
+            background: linear-gradient(to top, v.$primario 0%, v.$primario 100%);
+            background-repeat: no-repeat;
+            height: 10%;
+        }
+
+    }
+}
+
+.habilidades {
+    margin-top: 7rem;
+
+    @include m.tablet {
+        margin-top: 0;
+    }
+    background-color: v.$primario;
+
+    &__contenedor {
+        padding-top: 7rem;
+    }
+
+    &__heading {
+        color: v.$blanco;
+        padding-top: 0;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    &__card {
+        background-color: v.$blanco;
+        padding: 1rem 2rem;
+        border-radius: .6rem;
+        margin-inline: 4rem;
+        @include m.tablet {
+            padding-inline: 1rem;
+            margin-inline: 0rem;
+        }
+        @include m.desktop {
+            padding-inline: 2rem;
+        }
+    }
+
+    &__tipo,
+    &__contenido {
+        font-family: v.$fuenteSnippet;
+        font-size: 1.2rem;
+        color: v.$negro;
+        line-height: unset;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    &__texto {
+        font-size: 1.2rem;
+        color: v.$negro;
+        line-height: unset;
+        &:not(:last-of-type) {
+            margin-left: 1.5rem;
+        }
+    }
+
+    &__texto-red {
+        color: #cf222e;
+    }
+    &__texto-purple {
+        color: #8136a1;
+    }
+    &__texto-blue {
+        color: #0550ae;
+    }
+    &__texto-brown {
+        color: #953800;
+    }
+}
+
+.proyectos {
+    margin-top: -1px;
+    padding-block: 5rem;
+    background-color: v.$primario;
+
+    &__heading {
+        text-align: center;
+        color: v.$blanco;
+        margin-bottom: 3rem
+    }
+
+    &__grid {
+        @include m.grid(1, 4.6rem);
+        @include m.desktop {
+            @include m.grid(2, 5rem);
+        }
+    }
+}
+
+.proyecto {
+    box-shadow: 0 3px 7px 0 #686868;
+    border-radius: .6rem;
+    overflow: hidden;
+    transition-property: transform;
+    transition-duration: .3s;
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &__sistema,
+    &__todo,
+    &__portafolio,
+    &__systemcheck,
+    &__apirest,
+    &__chat,
+    &__luxuryservices {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        height: 650px;
+    }
+
+    &__sistema {
+        background-color: v.$blanco;
+    }
+
+    &__systemcheck {
+        background-color: #1e1f27;
+    }
+
+    &__luxuryservices {
+        background-color: #F8FAFC;
+    }
+
+    &__imagen-sistema {
+        background-repeat: no-repeat;
+        background-size: 80%;
+        background-position: top right;
+        margin-right: -1px;
+        background-image: image-set(
+            url(/assets/img/mixtas/proyecto_sistema.avif),
+            url(/assets/img/mixtas/proyecto_sistema.webp),
+            url(/assets/img/mixtas/proyecto_sistema.png)
+        );
+    }
+    &__imagen-todo {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        background-image: image-set(
+            url(/assets/img/mixtas/todo_dark.avif),
+            url(/assets/img/mixtas/todo_dark.webp),
+            url(/assets/img/mixtas/todo_dark.png)
+        );
+    }
+    &__imagen-portafolio {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center, left;
+        background-image: image-set(
+            url(/assets/img/mixtas/proyecto_portafolio.avif),
+            url(/assets/img/mixtas/proyecto_portafolio.webp),
+            url(/assets/img/mixtas/proyecto_portafolio.png)
+        ), 
+        linear-gradient(to bottom, v.$primario 0%, v.$primario 100%),
+        linear-gradient(to bottom, #2f2c56 0%, #2f2c56 100%),
+        linear-gradient(to bottom, #2f2c55 0%, #2f2c55 100%);
+    }
+
+    &__imagen-systemcheck {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: image-set(
+            url(/assets/img/mixtas/proyecto_systemcheck.avif),
+            url(/assets/img/mixtas/proyecto_systemcheck.webp),
+            url(/assets/img/mixtas/proyecto_systemcheck.png)
+        );
+    }
+
+    &__imagen-apirest {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: image-set(
+            url(/assets/img/mixtas/proyecto_apirest.avif),
+            url(/assets/img/mixtas/proyecto_apirest.webp),
+            url(/assets/img/mixtas/proyecto_apirest.png)
+        );
+    }
+
+    &__imagen-chat {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top, center;
+        background-image: image-set(
+            url(/assets/img/mixtas/proyecto_chat.webp),
+            url(/assets/img/mixtas/proyecto_chat.png)
+        );
+    }
+
+    &__imagen-luxuryservices {
+        margin-top: 1rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top, center;
+        background-image: image-set(
+            url(/assets/img/mixtas/proyecto_luxuryservices.avif),
+            url(/assets/img/mixtas/proyecto_luxuryservices.webp),
+            url(/assets/img/mixtas/proyecto_luxuryservices.png)
+        );
+    }
+
+    &__contenido {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: v.$blanco;
+        align-items: center;
+        text-align: center;
+        padding: 0 1rem 1.5rem 1rem;
+        gap: 1rem;
+        @include m.desktop {
+            padding-inline: 1.5rem;
+        }
+    }
+
+    &__titulo-sistema,
+    &__titulo-todo,
+    &__titulo-portafolio,
+    &__titulo-systemcheck,
+    &__titulo-apirest,
+    &__titulo-chat,
+    &__titulo-luxuryservices {
+        margin-top: 3rem;
+    }
+
+    &__descripcion {
+        color: v.$terciario;
+        margin: 1rem 0 1rem 0;
+        max-width: 95%;
+    }
+
+    &__lenguajes-todo {
+        margin-bottom: 1.4rem;
+        @include m.telefono {
+            margin-bottom: 3rem;
+        }
+        @include m.desktop {
+            margin-bottom: 2.5rem;
+        }
+        @include m.desktop-xxl {
+            margin-bottom: 1.75rem;
+        }
+    }
+
+    &__lenguaje {
+        text-transform: uppercase;
+        color: v.$terciario;
+        font-weight: 700;
+        font-size: 1.25rem;
+        @media (min-width: 380px) {
+            font-size: 1.3rem;
+        }
+        @media (min-width: 400px) {
+            font-size: 1.4rem;
+        }
+        &:last-of-type {
+            padding-left: .5rem;
+        }
+        &:not(:last-of-type) {
+            border-right: 2px solid v.$terciario;
+            padding-inline: .5rem;
+        }
+    }
+
+    &__enlace {
+        border-radius: 1.6rem;
+
+        &::after {
+            content: '';
+            padding: 2rem;
+            display: inline-block;
+            background-size: 4rem;
+        }
+
+        &[href*="github"]::after {
+            background-image: url(/assets/img/iconos/github_black.svg);
+        }
+    }
+
+    &__accesible {
+        display: block;
+        height: 1px;
+        width: 1px;
+        border: 0;
+        padding: 0;
+        clip: rect(0,0,0,0);
+        overflow: hidden;
+    }
+}

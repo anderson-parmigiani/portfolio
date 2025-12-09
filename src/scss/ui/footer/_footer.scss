@@ -1,0 +1,12 @@
+@use '../../base/variables' as v;
+
+.footer {
+    background-color: darken(v.$primario, 5%);
+    margin-top: -1px;
+    &__copyright {
+        font-size: 1.4rem;
+        padding-block: 2rem;
+        text-align: center;
+        margin: 0;
+    }
+}
